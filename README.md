@@ -1,4 +1,4 @@
-# Auto-GPT Easy Installer
+# Auto-GPT Sandbox Wizard - Easy Installer
 
 This script allows you to easily install and run the Auto-GPT application inside a Docker container. Running the application inside a Docker container provides a secure sandboxed environment, preventing any potential harm to your computer from continuous mode malfunctions. However, please note that you still need to supervise the application when running in continuous mode to avoid any unintended damage.
 
