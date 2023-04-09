@@ -1,17 +1,21 @@
+# Install Chocolatey if not already installed
+if (-not (Get-Command "choco" -ErrorAction SilentlyContinue)) {
+    Set-ExecutionPolicy Bypass -Scope Process -Force
+    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+}
+
 # Check if Docker is installed, otherwise install it
 if (-not (Get-Command "docker" -ErrorAction SilentlyContinue)) {
     Write-Host "Docker not found. Installing Docker..."
-    if (Get-Command "apt-get" -ErrorAction SilentlyContinue) {
-        Invoke-WebRequest -Uri "https://get.docker.com" -OutFile "get-docker.ps1"
-        Start-Process "powershell" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File .\get-docker.ps1" -Verb RunAs
-        & sudo usermod -aG docker $(whoami)
-        Remove-Item "get-docker.ps1"
-    } elseif (Get-Command "brew" -ErrorAction SilentlyContinue) {
-        brew install docker
-    } else {
-        Write-Host "Error: Unable to find a suitable package manager to install Docker"
-        exit 1
-    }
+    choco install docker-desktop -y
+    Write-Host "Please restart the script after Docker has been installed and started."
+    exit
+}
+
+# Check if git is installed, otherwise install it
+if (-not (Get-Command "git" -ErrorAction SilentlyContinue)) {
+    Write-Host "Git not found. Installing Git..."
+    choco install git -y
 }
 
 # Check if the Docker container exists
