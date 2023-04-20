@@ -54,7 +54,8 @@ if (-not $container_exists) {
     }
 
     # Clone the Git repository
-    $git_url = "https://github.com/Torantulino/Auto-GPT.git"
+    $git_url = "https://github.com/Significant-Gravitas/Auto-GPT.git"
+    
     git clone $git_url cloned_repo
 
     # Modify the .env file in the cloned repository
