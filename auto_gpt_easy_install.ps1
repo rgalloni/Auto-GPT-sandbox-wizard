@@ -31,14 +31,11 @@ if ($softwareInstalled) {
 # Updating WSL
 wsl --update
 
-# Check if Docker Desktop is running
-$docker = docker ps 2>&1
-
 Write-Host "Please make sure Docker Desktop is running. If it's not, start Docker Desktop before proceeding."
 Read-Host "Press ENTER when Docker Desktop is running"
 
 # Check if Auto-GPT folder exists and if it has a .git directory
-if (Test-Path "Auto-GPT") -and (Test-Path "Auto-GPT/.git") {
+if ((Test-Path "Auto-GPT") -and (Test-Path "Auto-GPT/.git")) {
     Set-Location Auto-GPT
     # Fetch the latest changes from the remote repository
     git fetch
