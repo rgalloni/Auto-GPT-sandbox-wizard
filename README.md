@@ -2,7 +2,7 @@
 
 This script allows you to easily install and run the Auto-GPT application inside a Docker container. Running the application inside a Docker container provides a secure sandboxed environment, preventing any potential harm to your computer from continuous mode malfunctions. However, please note that you still need to supervise the application when running in continuous mode to avoid any unintended damage.
 
-## UPDATE 22/09/2023
+## UPDATE 22/04/2023
 
 The following updates have been made:
 - Now it works with official Docker file to future proof implementations
