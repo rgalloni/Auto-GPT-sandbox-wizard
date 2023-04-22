@@ -5,9 +5,9 @@ This script allows you to easily install and run the Auto-GPT application inside
 ## UPDATE 22/04/2023
 
 The following updates have been made:
-- Now it works with official Docker file to future proof implementations
-- It will keeps your Auto-GPT updated with the last release (if you ask for)
-- Improved user interactions and information requests throughout the script
+- Now it works with the official Docker file, ensuring future-proof implementations.
+- It will keep your Auto-GPT updated with the latest release, if requested.
+- Additionally, user interactions and information requests have been improved throughout the script.
 
 ## Features
 - Automatically installs Docker if not already installed
