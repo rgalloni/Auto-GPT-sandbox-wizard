@@ -106,4 +106,4 @@ fi
 
 # Run Docker container
 echo "Starting Auto-GPT Docker container..."
-docker run -it --env-file=./Auto-GPT/.env -v "${workspace_path}:/home/appuser/auto_gpt_workspace" auto-gpt $gpt3_only_flag $continuous_flag
+docker run -it --env-file=./Auto-GPT/.env -v "${workspace_path}:/app/auto_gpt_workspace" auto-gpt $gpt3_only_flag $continuous_flag
